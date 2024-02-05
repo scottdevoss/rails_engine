@@ -186,6 +186,27 @@
           null
         ]
       },
+      "/Users/scottdevoss/turing/3mod/projects/rails_engine/spec/factories/items.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          11,
+          11,
+          11,
+          null,
+          null
+        ]
+      },
+      "/Users/scottdevoss/turing/3mod/projects/rails_engine/spec/factories/merchants.rb": {
+        "lines": [
+          1,
+          1,
+          21,
+          null,
+          null
+        ]
+      },
       "/Users/scottdevoss/turing/3mod/projects/rails_engine/config/routes.rb": {
         "lines": [
           1,
@@ -197,10 +218,166 @@
           null,
           null,
           null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/scottdevoss/turing/3mod/projects/rails_engine/app/models/item.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/scottdevoss/turing/3mod/projects/rails_engine/app/models/application_record.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/scottdevoss/turing/3mod/projects/rails_engine/spec/models/merchant_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/scottdevoss/turing/3mod/projects/rails_engine/app/models/merchant.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/scottdevoss/turing/3mod/projects/rails_engine/spec/request_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/scottdevoss/turing/3mod/projects/rails_engine/spec/requests/api/v1/items_request_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          10,
+          10,
+          null,
+          10,
+          10,
+          null,
+          10,
+          10,
+          null,
+          10,
+          10,
+          null,
+          10,
+          10,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/scottdevoss/turing/3mod/projects/rails_engine/spec/requests/api/v1/merchants_request_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          10,
+          10,
+          null,
+          10,
+          10,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/scottdevoss/turing/3mod/projects/rails_engine/app/controllers/api/v1/items_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/scottdevoss/turing/3mod/projects/rails_engine/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/scottdevoss/turing/3mod/projects/rails_engine/app/serializers/item_serializer.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/scottdevoss/turing/3mod/projects/rails_engine/app/controllers/api/v1/merchants_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/scottdevoss/turing/3mod/projects/rails_engine/app/serializers/merchant_serializer.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          null,
           null
         ]
       }
     },
-    "timestamp": 1707158757
+    "timestamp": 1707176913
   }
 }
