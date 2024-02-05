@@ -256,6 +256,7 @@
           1,
           null,
           1,
+          null,
           10,
           10,
           null,
@@ -280,8 +281,16 @@
           1,
           null
         ]
+      },
+      "/Users/scottdevoss/turing/3mod/projects/rails_engine/app/serializers/merchant_serializer.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null
+        ]
       }
     },
-    "timestamp": 1707171432
+    "timestamp": 1707172023
   }
 }

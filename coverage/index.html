@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2024-02-05T15:17:12-07:00">2024-02-05T15:17:12-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2024-02-05T15:27:03-07:00">2024-02-05T15:27:03-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -30,7 +30,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.63
+         1.61
        </span>
     </span> hits/line
     )
@@ -39,12 +39,12 @@
   <a name="AllFiles"></a>
 
   <div>
-    <b>15</b> files in total.
+    <b>16</b> files in total.
   </div>
 
   <div class="t-line-summary">
-    <b>73</b> relevant lines,
-    <span class="green"><b>73</b> lines covered</span> and
+    <b>76</b> relevant lines,
+    <span class="green"><b>76</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed. </span>
     (<span class="green">
   100.0%
@@ -109,6 +109,17 @@
             <td class="cell--number">2</td>
             <td class="cell--number">1</td>
             <td class="cell--number">1</td>
+            <td class="cell--number">0</td>
+            <td class="cell--number">1.00</td>
+            
+          </tr>
+        
+          <tr class="t-file">
+            <td class="strong t-file__name"><a href="#01b13d588bbb19b6e66e25093418a948d0a9a7dc" class="src_link" title="app/serializers/merchant_serializer.rb">app/serializers/merchant_serializer.rb</a></td>
+            <td class="green strong cell--number t-file__coverage">100.00 %</td>
+            <td class="cell--number">4</td>
+            <td class="cell--number">3</td>
+            <td class="cell--number">3</td>
             <td class="cell--number">0</td>
             <td class="cell--number">1.00</td>
             
@@ -227,7 +238,7 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#e2b8323718beca9aff85e863562d258dda28a64e" class="src_link" title="spec/requests/api/v1/merchants_request_spec.rb">spec/requests/api/v1/merchants_request_spec.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">23</td>
+            <td class="cell--number">24</td>
             <td class="cell--number">13</td>
             <td class="cell--number">13</td>
             <td class="cell--number">0</td>
@@ -307,7 +318,7 @@
 
             
 
-            <code class="ruby">    render json: Merchant.all</code>
+            <code class="ruby">    render json: MerchantSerializer.new(Merchant.all)</code>
           </li>
         </div>
       
@@ -494,6 +505,81 @@
       
         <div>
           <li class="never" data-hits="" data-linenumber="2">
+            
+            
+
+            
+
+            <code class="ruby">end</code>
+          </li>
+        </div>
+      
+    </ol>
+  </pre>
+</div>
+
+      
+        <div class="source_table" id="01b13d588bbb19b6e66e25093418a948d0a9a7dc">
+  <div class="header">
+    <h3>app/serializers/merchant_serializer.rb</h3>
+    <h4>
+      <span class="green">
+  100.0%
+</span>
+
+      lines covered
+    </h4>
+
+    
+
+    <div class="t-line-summary">
+      <b>3</b> relevant lines.
+      <span class="green"><b>3</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+
+    
+
+  </div>
+
+  <pre>
+    <ol>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="1">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">class MerchantSerializer</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="2">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  include JSONAPI::Serializer</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="3">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  attributes :name</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="4">
             
             
 
@@ -3007,7 +3093,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">    </code>
           </li>
         </div>
       
@@ -3018,7 +3104,7 @@
 
             
 
-            <code class="ruby">    expect(merchants.count).to eq(10)</code>
+            <code class="ruby">    expect(merchants[:data].count).to eq(10)</code>
           </li>
         </div>
       
@@ -3040,18 +3126,18 @@
 
             
 
-            <code class="ruby">    merchants.each do |merchant|</code>
+            <code class="ruby">    merchants[:data].each do |merchant|</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="10" data-linenumber="16">
-            <span class="hits">10</span>
+          <li class="never" data-hits="" data-linenumber="16">
+            
             
 
             
 
-            <code class="ruby">      expect(merchant).to have_key(:id)</code>
+            <code class="ruby">      # require &#39;pry&#39;; binding.pry</code>
           </li>
         </div>
       
@@ -3062,12 +3148,23 @@
 
             
 
-            <code class="ruby">      expect(merchant[:id]).to be_an(Integer)</code>
+            <code class="ruby">      expect(merchant).to have_key(:id)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="18">
+          <li class="covered" data-hits="10" data-linenumber="18">
+            <span class="hits">10</span>
+            
+
+            
+
+            <code class="ruby">      expect(merchant[:id]).to be_an(String)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="19">
             
             
 
@@ -3078,35 +3175,24 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="10" data-linenumber="19">
-            <span class="hits">10</span>
-            
-
-            
-
-            <code class="ruby">      expect(merchant).to have_key(:name)</code>
-          </li>
-        </div>
-      
-        <div>
           <li class="covered" data-hits="10" data-linenumber="20">
             <span class="hits">10</span>
             
 
             
 
-            <code class="ruby">      expect(merchant[:name]).to be_an(String)</code>
+            <code class="ruby">      expect(merchant[:attributes]).to have_key(:name)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="21">
-            
-            
-
+          <li class="covered" data-hits="10" data-linenumber="21">
+            <span class="hits">10</span>
             
 
-            <code class="ruby">    end</code>
+            
+
+            <code class="ruby">      expect(merchant[:attributes][:name]).to be_an(String)</code>
           </li>
         </div>
       
@@ -3117,12 +3203,23 @@
 
             
 
-            <code class="ruby">  end</code>
+            <code class="ruby">    end</code>
           </li>
         </div>
       
         <div>
           <li class="never" data-hits="" data-linenumber="23">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="24">
             
             
 
