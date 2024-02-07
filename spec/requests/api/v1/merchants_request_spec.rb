@@ -42,7 +42,7 @@ describe "Merchants API" do
   end
 
   describe 'sad paths' do
-    it "will gracefully handle if a book id doesn't exist" do
+    it "will gracefully handle if a merchant id doesn't exist" do
       get "/api/v1/merchants/1"
 
       expect(response).to_not be_successful
