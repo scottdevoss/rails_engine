@@ -123,7 +123,13 @@ describe "Items API" do
     merchant = create(:merchant)
     items = create_list(:item, 10)
 
+    merchant.items << items
     
+    get "/api/v1/merchants/#{merchant.id}/items"
+    
+    merchant_items = JSON.parse(response.body, symbolize_names: true)
+    
+    expect(response).to be_successful
   end
 
   describe 'sad paths' do
