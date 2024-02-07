@@ -202,7 +202,7 @@
         "lines": [
           1,
           1,
-          23,
+          24,
           null,
           null
         ]
@@ -232,6 +232,8 @@
         "lines": [
           1,
           1,
+          null,
+          1,
           null
         ]
       },
@@ -254,6 +256,8 @@
       "/Users/scottdevoss/turing/3mod/projects/rails_engine/app/models/merchant.rb": {
         "lines": [
           1,
+          1,
+          null,
           1,
           null
         ]
@@ -333,7 +337,26 @@
           null,
           1,
           1,
+          null,
+          null,
           1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
           null,
           1,
           1,
@@ -342,6 +365,33 @@
           1,
           1,
           1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          0,
+          null,
+          null,
+          null,
+          null,
+          0,
+          null,
+          0,
+          null,
+          0,
+          0,
+          null,
+          0,
+          null,
+          0,
+          0,
+          0,
           null,
           null,
           null,
@@ -422,8 +472,17 @@
           2,
           null,
           null,
+          1,
+          1,
+          null,
+          null,
+          null,
           null,
           1,
+          null,
+          1,
+          1,
+          null,
           null,
           1,
           1,
@@ -443,6 +502,8 @@
           1,
           1,
           1,
+          null,
+          null,
           null
         ]
       },
@@ -510,6 +571,6 @@
         ]
       }
     },
-    "timestamp": 1707256575
+    "timestamp": 1707188810
   }
 }
