@@ -119,6 +119,13 @@ describe "Items API" do
     expect{Item.find(item.id)}.to raise_error(ActiveRecord::RecordNotFound)
   end
 
+  it "returns all items associated with a merchant" do
+    merchant = create(:merchant)
+    items = create_list(:item, 10)
+
+    
+  end
+
   describe 'sad paths' do
     it "will gracefully handle if a book id doesn't exist" do
       get "/api/v1/items/1"
