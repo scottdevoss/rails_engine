@@ -133,7 +133,7 @@ describe "Items API" do
   end
 
   describe 'sad paths' do
-    it "will gracefully handle if a book id doesn't exist" do
+    it "will gracefully handle if a item id doesn't exist" do
       get "/api/v1/items/1"
 
       expect(response).to_not be_successful
@@ -145,14 +145,34 @@ describe "Items API" do
       expect(data[:errors].first[:title]).to eq("Couldn't find Item with 'id'=1")
     end
 
-    xit "will gracefully handle if all the attributes are not created" do
+    it "will gracefully handle if a merchant id doesn't exist" do
+      item_params = ({
+        name: "Treadmill",
+        description: "Exercise on the spot!",
+        unit_price: 1000.00,
+        merchant_id: 1
+      })
+
+      headers = {"CONTENT_TYPE" => "application/json"}
+      post "/api/v1/items", headers: headers, params: JSON.generate(item: item_params)
+
+      expect(response).to_not be_successful
+      expect(response.status).to eq(404)
+      data = JSON.parse(response.body, symbolize_names: true)
+
+      expect(data[:errors]).to be_a(Array)
+      expect(data[:errors].first[:status]).to eq("404")
+      expect(data[:errors].first[:title]).to eq("Couldn't find Merchant with 'id'=1")
+    end
+
+    it "create will gracefully handle if all the attributes are not created" do
       id = create(:merchant).id
 
       item_params = ({
-        name: "Treadmill",
-        unit_price: 1000.00,
-        merchant_id: id
-      })
+                    name: "Treadmill",
+                    unit_price: 1000.00,
+                    merchant_id: id
+                  })
 
       headers = {"CONTENT_TYPE" => "application/json"}
         
@@ -160,12 +180,13 @@ describe "Items API" do
 
       expect(response).to_not be_successful
       expect(response.status).to eq(400)
+      
 
       data = JSON.parse(response.body, symbolize_names: true)
 
       expect(data[:errors]).to be_a(Array)
       expect(data[:errors].first[:status]).to eq("400")
-      expect(data[:errors].first[:title]).to eq("Validation Failed")
+      expect(data[:errors].first[:title]).to eq("Validation failed: Description can't be blank")
     end
   end
 
