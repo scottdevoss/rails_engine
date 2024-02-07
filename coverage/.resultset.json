@@ -202,7 +202,7 @@
         "lines": [
           1,
           1,
-          14,
+          37,
           null,
           null
         ]
@@ -384,6 +384,7 @@
           null,
           1,
           1,
+          1,
           null,
           null,
           1,
@@ -530,6 +531,10 @@
           2,
           null,
           null,
+          1,
+          null,
+          1,
+          null,
           null,
           1,
           1,
@@ -563,8 +568,71 @@
           null,
           null
         ]
+      },
+      "/Users/scottdevoss/turing/3mod/projects/rails_engine/app/serializers/error_serializer.rb": {
+        "lines": [
+          1,
+          1,
+          2,
+          null,
+          null,
+          1,
+          null,
+          2,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/scottdevoss/turing/3mod/projects/rails_engine/app/poros/error_message.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          2,
+          2,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/scottdevoss/turing/3mod/projects/rails_engine/app/controllers/api/v1/merchants_controller.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          2,
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/scottdevoss/turing/3mod/projects/rails_engine/app/serializers/merchant_serializer.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null
+        ]
       }
     },
-    "timestamp": 1707265791
+    "timestamp": 1707336344
   }
 }

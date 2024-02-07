@@ -145,14 +145,14 @@ describe "Items API" do
       expect(data[:errors].first[:title]).to eq("Couldn't find Item with 'id'=1")
     end
 
-    xit "will gracefully handle if all the attributes are not created" do
+    xit "create will gracefully handle if all the attributes are not created" do
       id = create(:merchant).id
 
       item_params = ({
-        name: "Treadmill",
-        unit_price: 1000.00,
-        merchant_id: id
-      })
+                    name: "Treadmill",
+                    unit_price: 1000.00,
+                    merchant_id: id
+                  })
 
       headers = {"CONTENT_TYPE" => "application/json"}
         
