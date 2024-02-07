@@ -9,8 +9,17 @@ class Api::V1::ItemsController < ApplicationController
     render json: ItemSerializer.new(Item.find(params[:id]))
   end
 
+  def create
+    render json: ItemSerializer.new(Item.create(item_params)), status: 201
+    # require 'pry'; binding.pry
+  end
+
 
   private
+
+  def item_params
+    params.require(:item).permit(:name, :description, :unit_price, :merchant_id)
+  end
 
   def not_found_response(exception)
     render json: ErrorSerializer.new(ErrorMessage.new(exception.message, 404))
