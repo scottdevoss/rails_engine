@@ -14,6 +14,11 @@ class Api::V1::ItemsController < ApplicationController
     # require 'pry'; binding.pry
   end
 
+  def update
+    
+    render json: ItemSerializer.new(Item.update(params[:id],item_params))
+  end
+
 
   private
 
