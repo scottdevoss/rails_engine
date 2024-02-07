@@ -81,6 +81,31 @@ describe "Items API" do
     expect(created_item.merchant_id).to eq(item_params[:merchant_id])
   end
 
+  it "can create a new item" do
+    id = create(:merchant).id
+    item_params = ({
+      name: "Treadmill",
+      description: "Exercise on the spot!",
+      unit_price: 1000.00,
+      merchant_id: id
+    })
+    headers = {"CONTENT_TYPE" => "application/json"}
+    post "/api/v1/items", headers: headers, params: JSON.generate(item: item_params)
+
+    item_id = Item.last.id
+
+    item_params_new = ({
+      name: "Peloton"
+    })
+
+    patch "/api/v1/items/#{item_id}", headers: headers, params: JSON.generate({item: item_params_new})
+    item = Item.find_by(id: item_id)
+
+    expect(response).to be_successful
+    expect(item.name).to eq("Peloton")
+    expect(item.name).to_not eq("Treadmill")
+  end
+
   describe 'sad paths' do
     it "will gracefully handle if a book id doesn't exist" do
       get "/api/v1/items/1"
