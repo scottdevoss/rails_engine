@@ -58,6 +58,29 @@ describe "Items API" do
     expect(item[:data][:attributes][:merchant_id]).to be_an(Integer)
   end
 
+  it "can create a new item" do
+    id = create(:merchant).id
+
+    item_params = ({
+      name: "Treadmill",
+      description: "Exercise on the spot!",
+      unit_price: 1000.00,
+      merchant_id: id
+    })
+
+    headers = {"CONTENT_TYPE" => "application/json"}
+      
+    post "/api/v1/items", headers: headers, params: JSON.generate(item: item_params)
+
+    created_item = Item.last
+      
+    expect(response).to be_successful
+    expect(created_item.name).to eq(item_params[:name])
+    expect(created_item.description).to eq(item_params[:description])
+    expect(created_item.unit_price).to eq(item_params[:unit_price])
+    expect(created_item.merchant_id).to eq(item_params[:merchant_id])
+  end
+
   describe 'sad paths' do
     it "will gracefully handle if a book id doesn't exist" do
       get "/api/v1/items/1"
@@ -69,6 +92,29 @@ describe "Items API" do
       expect(data[:errors]).to be_a(Array)
       expect(data[:errors].first[:status]).to eq("404")
       expect(data[:errors].first[:title]).to eq("Couldn't find Item with 'id'=1")
+    end
+
+    xit "will gracefully handle if all the attributes are not created" do
+      id = create(:merchant).id
+
+      item_params = ({
+        name: "Treadmill",
+        unit_price: 1000.00,
+        merchant_id: id
+      })
+
+      headers = {"CONTENT_TYPE" => "application/json"}
+        
+      post "/api/v1/items", headers: headers, params: JSON.generate(item: item_params)
+
+      expect(response).to_not be_successful
+      expect(response.status).to eq(400)
+
+      data = JSON.parse(response.body, symbolize_names: true)
+
+      expect(data[:errors]).to be_a(Array)
+      expect(data[:errors].first[:status]).to eq("400")
+      expect(data[:errors].first[:title]).to eq("Validation Failed")
     end
   end
 
