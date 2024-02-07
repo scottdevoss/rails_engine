@@ -190,4 +190,22 @@ describe "Items API" do
     end
   end
 
+  it "returns the merchant associated with an item" do
+    id = create(:merchant).id
+    id_2 = create(:merchant).id
+
+    item_1 = create(:item, merchant_id: id)
+    item_2 = create(:item, merchant_id: id_2)
+    headers = {"CONTENT_TYPE" => "application/json"}
+
+    get "/api/v1/items/#{item_1.id}/merchant"
+
+  
+    data = JSON.parse(response.body, symbolize_names: true)
+    expect(response).to be_successful
+    expect(data[:data][:id]).to eq("#{id}")
+    expect(data[:data][:type]).to eq("merchant")
+    expect(data[:data][:attributes][:name]).to be_a(String)
+  end
+
 end
