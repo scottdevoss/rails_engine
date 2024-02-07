@@ -11,14 +11,15 @@ class Api::V1::ItemsController < ApplicationController
 
   def create
     render json: ItemSerializer.new(Item.create(item_params)), status: 201
-    # require 'pry'; binding.pry
   end
 
   def update
-    
     render json: ItemSerializer.new(Item.update(params[:id],item_params))
   end
 
+  def destroy
+    render json: Item.delete(params[:id]), status: 204
+  end
 
   private
 
