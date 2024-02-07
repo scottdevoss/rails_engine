@@ -15,7 +15,11 @@ Rails.application.routes.draw do
           resources :items, only: [:index]
         end
       end
-      resources :items
+      resources :items do
+        member do
+          resources :merchant, controller: :merchant_items
+        end
+      end
     end
   end
 end
