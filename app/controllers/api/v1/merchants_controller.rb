@@ -9,6 +9,15 @@ class Api::V1::MerchantsController < ApplicationController
     render json: MerchantSerializer.new(Merchant.find(params[:id]))
   end
 
+  def find
+    variable = Merchant.where("lower(name) LIKE ?", "%#{params[:name].downcase}%").order('lower(name)').first
+    if variable
+      render json: MerchantSerializer.new(variable)
+    else 
+      render json: ErrorSerializer.new(ErrorMessage.new(nil, 200)).data_serialize
+    end
+  end
+
   private
 
   def not_found_response(exception)

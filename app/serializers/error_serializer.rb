@@ -13,4 +13,8 @@ class ErrorSerializer
       ]
     }
   end
+
+  def data_serialize 
+    {data: @error_object}
+  end
 end
