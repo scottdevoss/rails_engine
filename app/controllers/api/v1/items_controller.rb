@@ -24,7 +24,17 @@ class Api::V1::ItemsController < ApplicationController
   end
 
   def find_all
-   render json: ItemSerializer.new(Item.where("lower(name) LIKE ?", "%#{params[:name].downcase}%"))
+    if params[:min_price] && params[:max_price] && params[:min_price].to_i >= 0 && params[:max_price].to_i >= 0 && !params[:name]
+      render json: ItemSerializer.new(Item.where("unit_price >= #{params[:min_price]}").where("unit_price <= #{params[:max_price]}"))
+    elsif params[:min_price] && params[:min_price].to_i >= 0 && !params[:name]
+      render json: ItemSerializer.new(Item.where("unit_price >= #{params[:min_price]}"))
+    elsif params[:max_price] && params[:max_price].to_i >= 0 && !params[:name]
+      render json: ItemSerializer.new(Item.where("unit_price <= #{params[:max_price]}"))
+    elsif params[:name] && !params[:min_price] && !params[:max_price]
+      render json: ItemSerializer.new(Item.where("lower(name) LIKE ?", "%#{params[:name].downcase}%"))
+    else
+      render json: ErrorSerializer.new(ErrorMessage.new(nil, 400)).serialize_json, status: 400
+    end
   end
 
   private
