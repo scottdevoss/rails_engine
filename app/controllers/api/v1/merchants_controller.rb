@@ -10,7 +10,12 @@ class Api::V1::MerchantsController < ApplicationController
   end
 
   def find
-    render json: MerchantSerializer.new(Merchant.where("lower(name) LIKE ?", "%#{params[:name].downcase}%").order('lower(name)').first)
+    variable = Merchant.where("lower(name) LIKE ?", "%#{params[:name].downcase}%").order('lower(name)').first
+    if variable
+      render json: MerchantSerializer.new(variable)
+    else 
+      render json: ErrorSerializer.new(ErrorMessage.new(nil, 200)).data_serialize
+    end
   end
 
   private
