@@ -82,6 +82,11 @@ describe "Merchants API" do
       get "/api/v1/merchants/find?name=NOMATCH"
 
       expect(response).to be_successful
+      data = JSON.parse(response.body, symbolize_names: true)
+      expect(data[:data]).to be_a(Hash)
+      expect(data[:data].count).to eq(2)
+      expect(data[:data][:message]).to eq(nil)
+      expect(data[:data][:status_code]).to eq(200)
     end
   end
 end
