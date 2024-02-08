@@ -57,6 +57,12 @@ describe "Merchants API" do
     expect(response).to be_successful
 
     data = JSON.parse(response.body, symbolize_names: true)
+
+    expect(data).to be_a(Hash)
+    expect(data[:data]).to be_a(Hash)
+    expect(data[:data][:id]).to eq("#{merchant_5.id}")
+    expect(data[:data][:attributes]).to be_a(Hash)
+    expect(data[:data][:attributes][:name]).to eq("Ballmart")
   end
 
   describe 'sad paths' do
