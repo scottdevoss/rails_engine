@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/scottdevoss/turing/3mod/projects/rails_engine/config/environment.rb": {
+      "/Users/cardiganking/turing_work/3mod/projects/rails_engine/config/environment.rb": {
         "lines": [
           null,
           1,
@@ -10,7 +10,7 @@
           1
         ]
       },
-      "/Users/scottdevoss/turing/3mod/projects/rails_engine/config/application.rb": {
+      "/Users/cardiganking/turing_work/3mod/projects/rails_engine/config/application.rb": {
         "lines": [
           1,
           null,
@@ -58,7 +58,7 @@
           null
         ]
       },
-      "/Users/scottdevoss/turing/3mod/projects/rails_engine/config/boot.rb": {
+      "/Users/cardiganking/turing_work/3mod/projects/rails_engine/config/boot.rb": {
         "lines": [
           1,
           null,
@@ -66,7 +66,7 @@
           1
         ]
       },
-      "/Users/scottdevoss/turing/3mod/projects/rails_engine/config/environments/test.rb": {
+      "/Users/cardiganking/turing_work/3mod/projects/rails_engine/config/environments/test.rb": {
         "lines": [
           1,
           null,
@@ -134,7 +134,7 @@
           null
         ]
       },
-      "/Users/scottdevoss/turing/3mod/projects/rails_engine/config/initializers/cors.rb": {
+      "/Users/cardiganking/turing_work/3mod/projects/rails_engine/config/initializers/cors.rb": {
         "lines": [
           null,
           null,
@@ -154,7 +154,7 @@
           null
         ]
       },
-      "/Users/scottdevoss/turing/3mod/projects/rails_engine/config/initializers/filter_parameter_logging.rb": {
+      "/Users/cardiganking/turing_work/3mod/projects/rails_engine/config/initializers/filter_parameter_logging.rb": {
         "lines": [
           null,
           null,
@@ -166,7 +166,7 @@
           null
         ]
       },
-      "/Users/scottdevoss/turing/3mod/projects/rails_engine/config/initializers/inflections.rb": {
+      "/Users/cardiganking/turing_work/3mod/projects/rails_engine/config/initializers/inflections.rb": {
         "lines": [
           null,
           null,
@@ -186,7 +186,7 @@
           null
         ]
       },
-      "/Users/scottdevoss/turing/3mod/projects/rails_engine/spec/factories/items.rb": {
+      "/Users/cardiganking/turing_work/3mod/projects/rails_engine/spec/factories/items.rb": {
         "lines": [
           1,
           1,
@@ -198,7 +198,7 @@
           null
         ]
       },
-      "/Users/scottdevoss/turing/3mod/projects/rails_engine/spec/factories/merchants.rb": {
+      "/Users/cardiganking/turing_work/3mod/projects/rails_engine/spec/factories/merchants.rb": {
         "lines": [
           1,
           1,
@@ -207,7 +207,7 @@
           null
         ]
       },
-      "/Users/scottdevoss/turing/3mod/projects/rails_engine/config/routes.rb": {
+      "/Users/cardiganking/turing_work/3mod/projects/rails_engine/config/routes.rb": {
         "lines": [
           1,
           null,
@@ -236,7 +236,103 @@
           null
         ]
       },
-      "/Users/scottdevoss/turing/3mod/projects/rails_engine/app/models/item.rb": {
+      "/Users/cardiganking/turing_work/3mod/projects/rails_engine/spec/requests/api/v1/merchants_request_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          10,
+          10,
+          null,
+          10,
+          10,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/cardiganking/turing_work/3mod/projects/rails_engine/app/models/item.rb": {
         "lines": [
           1,
           1,
@@ -253,23 +349,14 @@
           null
         ]
       },
-      "/Users/scottdevoss/turing/3mod/projects/rails_engine/app/models/application_record.rb": {
+      "/Users/cardiganking/turing_work/3mod/projects/rails_engine/app/models/application_record.rb": {
         "lines": [
           1,
           1,
           null
         ]
       },
-      "/Users/scottdevoss/turing/3mod/projects/rails_engine/spec/models/merchant_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          null
-        ]
-      },
-      "/Users/scottdevoss/turing/3mod/projects/rails_engine/app/models/merchant.rb": {
+      "/Users/cardiganking/turing_work/3mod/projects/rails_engine/app/models/merchant.rb": {
         "lines": [
           1,
           1,
@@ -278,375 +365,7 @@
           null
         ]
       },
-      "/Users/scottdevoss/turing/3mod/projects/rails_engine/spec/request_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/scottdevoss/turing/3mod/projects/rails_engine/spec/requests/api/v1/items_request_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          1,
-          10,
-          10,
-          null,
-          10,
-          10,
-          null,
-          10,
-          10,
-          null,
-          10,
-          10,
-          null,
-          10,
-          10,
-          null,
-          null,
-          null,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          1,
-          1,
-          null,
-          1,
-          1,
-          null,
-          1,
-          1,
-          null,
-          1,
-          1,
-          null,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          1,
-          1,
-          null,
-          1,
-          null,
-          null,
-          1,
-          null,
-          null,
-          1,
-          1,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          1,
-          1,
-          1,
-          2,
-          null,
-          null,
-          1,
-          1,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          1,
-          1,
-          null,
-          1,
-          10,
-          10,
-          null,
-          10,
-          10,
-          null,
-          10,
-          10,
-          null,
-          10,
-          10,
-          null,
-          10,
-          10,
-          null,
-          null,
-          null,
-          1,
-          1,
-          1,
-          null,
-          1,
-          1,
-          1,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          1,
-          null,
-          1,
-          1,
-          1,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          1,
-          null,
-          1,
-          1,
-          null,
-          null,
-          1,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null,
-          1,
-          1,
-          1,
-          null,
-          1,
-          1,
-          1,
-          null,
-          1,
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          1,
-          1,
-          1,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/scottdevoss/turing/3mod/projects/rails_engine/spec/requests/api/v1/merchants_request_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          10,
-          10,
-          null,
-          10,
-          10,
-          null,
-          null,
-          null,
-          1,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          1,
-          1,
-          null,
-          1,
-          1,
-          null,
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          1,
-          null,
-          1,
-          1,
-          1,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          null,
-          1,
-          1,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/scottdevoss/turing/3mod/projects/rails_engine/app/controllers/api/v1/items_controller.rb": {
+      "/Users/cardiganking/turing_work/3mod/projects/rails_engine/app/controllers/api/v1/items_controller.rb": {
         "lines": [
           1,
           1,
@@ -695,35 +414,15 @@
           null
         ]
       },
-      "/Users/scottdevoss/turing/3mod/projects/rails_engine/app/controllers/application_controller.rb": {
+      "/Users/cardiganking/turing_work/3mod/projects/rails_engine/app/controllers/application_controller.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/scottdevoss/turing/3mod/projects/rails_engine/app/serializers/item_serializer.rb": {
+      "/Users/cardiganking/turing_work/3mod/projects/rails_engine/app/serializers/item_serializer.rb": {
         "lines": [
           1,
-          1,
-          1,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/scottdevoss/turing/3mod/projects/rails_engine/app/controllers/api/v1/merchant/items_controller.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          null,
-          null
-        ]
-      },
-      "/Users/scottdevoss/turing/3mod/projects/rails_engine/app/controllers/api/v1/merchant_items_controller.rb": {
-        "lines": [
-          1,
-          null,
           1,
           1,
           null,
@@ -731,7 +430,27 @@
           null
         ]
       },
-      "/Users/scottdevoss/turing/3mod/projects/rails_engine/app/serializers/merchant_serializer.rb": {
+      "/Users/cardiganking/turing_work/3mod/projects/rails_engine/app/controllers/api/v1/merchant/items_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/cardiganking/turing_work/3mod/projects/rails_engine/app/controllers/api/v1/merchant_items_controller.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/cardiganking/turing_work/3mod/projects/rails_engine/app/serializers/merchant_serializer.rb": {
         "lines": [
           1,
           1,
@@ -739,40 +458,46 @@
           null
         ]
       },
-      "/Users/scottdevoss/turing/3mod/projects/rails_engine/app/serializers/error_serializer.rb": {
+      "/Users/cardiganking/turing_work/3mod/projects/rails_engine/app/serializers/error_serializer.rb": {
         "lines": [
           1,
           1,
+          5,
+          null,
+          null,
+          1,
+          null,
           4,
           null,
           null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
           1,
-          null,
-          4,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
+          1,
           null,
           null
         ]
       },
-      "/Users/scottdevoss/turing/3mod/projects/rails_engine/app/poros/error_message.rb": {
+      "/Users/cardiganking/turing_work/3mod/projects/rails_engine/app/poros/error_message.rb": {
         "lines": [
           1,
           1,
           null,
           1,
-          4,
-          4,
+          5,
+          5,
+          null,
+          null,
           null,
           null,
           null
         ]
       },
-      "/Users/scottdevoss/turing/3mod/projects/rails_engine/app/controllers/api/v1/merchants_controller.rb": {
+      "/Users/cardiganking/turing_work/3mod/projects/rails_engine/app/controllers/api/v1/merchants_controller.rb": {
         "lines": [
           1,
           1,
@@ -787,6 +512,12 @@
           null,
           1,
           2,
+          null,
+          2,
+          1,
+          null,
+          1,
+          null,
           null,
           null,
           1,
@@ -799,6 +530,6 @@
         ]
       }
     },
-    "timestamp": 1707414515
+    "timestamp": 1707417052
   }
 }
