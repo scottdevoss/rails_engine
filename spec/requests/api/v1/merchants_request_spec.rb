@@ -77,5 +77,11 @@ describe "Merchants API" do
       expect(data[:errors].first[:status]).to eq("404")
       expect(data[:errors].first[:title]).to eq("Couldn't find Merchant with 'id'=1")
     end
+
+    it "will gracefully handle if there is no match for a merchant search" do
+      get "/api/v1/merchants/find?name=NOMATCH"
+
+      expect(response).to be_successful
+    end
   end
 end
