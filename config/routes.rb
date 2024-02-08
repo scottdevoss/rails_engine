@@ -7,6 +7,8 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+  get "/api/v1/items/find_all", to: "api/v1/items#find_all"
+
 
   namespace :api do
     namespace :v1 do
