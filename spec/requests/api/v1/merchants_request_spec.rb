@@ -41,6 +41,24 @@ describe "Merchants API" do
 
   end
 
+  it "can find one merchant based on search criteria" do
+    merchant_1 = Merchant.create!(name: "walmart")
+    merchant_2 = Merchant.create!(name: "walgreens")
+    merchant_3 = Merchant.create!(name: "Malmart")
+    merchant_4 = Merchant.create!(name: "K-Mart")
+    merchant_5 = Merchant.create!(name: "Ballmart")
+    merchant_6 = Merchant.create!(name: "Carmart")
+    merchant_7 = Merchant.create!(name: "minimart")
+    merchant_8 = Merchant.create!(name: "ezmart")
+    
+    
+    get "/api/v1/merchants/find?name=mart"
+
+    expect(response).to be_successful
+
+    data = JSON.parse(response.body, symbolize_names: true)
+  end
+
   describe 'sad paths' do
     it "will gracefully handle if a merchant id doesn't exist" do
       get "/api/v1/merchants/1"
