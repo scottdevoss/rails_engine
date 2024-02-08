@@ -258,4 +258,42 @@ describe "Items API" do
     expect(data[:data].first[:attributes][:merchant_id]).to eq(item_1.merchant_id)
   end
 
+  it "can find items based on price" do
+    merchant_1 = create(:merchant)
+    merchant_2 = create(:merchant)
+    item_1 = Item.create!(name: "small Table", description: "small little table", unit_price: 88.88, merchant_id: merchant_1.id)
+    Item.create!(name: "large Table", description: "a large table", unit_price: 99.99, merchant_id: merchant_1.id)
+    Item.create!(name: "medium Table", description: "medium sized table", unit_price: 23.50, merchant_id: merchant_1.id)
+    Item.create!(name: "children's table", description: "children's table", unit_price: 75.99, merchant_id: merchant_1.id)
+    Item.create!(name: "high top table", description: "tall table", unit_price: 2.00, merchant_id: merchant_2.id)
+    Item.create!(name: "coffee table", description: "coffee table", unit_price: 0.99, merchant_id: merchant_2.id)
+    Item.create!(name: "bouncy ball", description: "a small bouncy ball", unit_price: 13.25, merchant_id: merchant_2.id)
+    Item.create!(name: "guitar tabulature", description: "guitar music book", unit_price: 55.49, merchant_id: merchant_1.id)
+    Item.create!(name: "twenty can tabs", description: "a child's collection of can tabs", unit_price: 1000.99, merchant_id: merchant_1.id)
+    Item.create!(name: "pogo stick", description: "a pogo stick", unit_price: 140.73, merchant_id: merchant_1.id)
+
+    get "/api/v1/items/find_all?min_price=50"
+
+    expect(response).to be_successful
+  end
+
+  it "sad path: can't have name and price in search" do
+    merchant_1 = create(:merchant)
+    merchant_2 = create(:merchant)
+    item_1 = Item.create!(name: "small Table", description: "small little table", unit_price: 88.88, merchant_id: merchant_1.id)
+    Item.create!(name: "large Table", description: "a large table", unit_price: 99.99, merchant_id: merchant_1.id)
+    Item.create!(name: "medium Table", description: "medium sized table", unit_price: 23.50, merchant_id: merchant_1.id)
+    Item.create!(name: "children's table", description: "children's table", unit_price: 75.99, merchant_id: merchant_1.id)
+    Item.create!(name: "high top table", description: "tall table", unit_price: 2.00, merchant_id: merchant_2.id)
+    Item.create!(name: "coffee table", description: "coffee table", unit_price: 0.99, merchant_id: merchant_2.id)
+    Item.create!(name: "bouncy ball", description: "a small bouncy ball", unit_price: 13.25, merchant_id: merchant_2.id)
+    Item.create!(name: "guitar tabulature", description: "guitar music book", unit_price: 55.49, merchant_id: merchant_1.id)
+    Item.create!(name: "twenty can tabs", description: "a child's collection of can tabs", unit_price: 1000.99, merchant_id: merchant_1.id)
+    Item.create!(name: "pogo stick", description: "a pogo stick", unit_price: 140.73, merchant_id: merchant_1.id)
+
+    get "/api/v1/items/find_all?name=table&min_price=50"
+    
+    expect(response).to_not be_successful
+  end
+
 end
