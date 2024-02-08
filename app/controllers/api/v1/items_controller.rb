@@ -23,6 +23,10 @@ class Api::V1::ItemsController < ApplicationController
     render json: Item.delete(params[:id]), status: 204
   end
 
+  def find_all
+   render json: ItemSerializer.new(Item.where("lower(name) LIKE ?", "%#{params[:name].downcase}%"))
+  end
+
   private
 
   def item_params
